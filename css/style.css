@@ -4,7 +4,6 @@ body{
 body *, body *::before, body *::after{
     box-sizing: border-box;
 }
-/* *, body *, [class] 개체에 border-box 적용 */
 
 .header, .visual, .main, .slogan, .footer-content{
     width: 940px;
@@ -22,62 +21,37 @@ body *, body *::before, body *::after{
 
 .main{
     background-color: blue;
-    padding: 30px 15px;
-    width: 940px;
-    /* height: 60vh; */
-    /* overflow: hidden; */ 
-    /* overflow로 자식요소의 높이를 파악해서 적용 */
-    /* float: left; */
-
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    justify-content: space-between;
 }
 
-.main::after{ 
-    content: "";
-    display: block;
-    clear: both;
-}
 
 .group{
     height: 60vh;
-    margin: 0 15px;
 }
 
 .group1{
     background-color: violet;
-    float: left;
     width: 250px;
 }
 
 .group2{
     background-color: aqua;
     width: 380px;
-    float: left;
 }
 
 .group3{
     background-color: sandybrown;
-    float: left;
     width: 190px;
 }
-
-/* .clearfix{
-    clear: both;
-} */
 
 
 .slogan{
     background-color: lightgreen;
     height: 10vh;
-    /* clear: both    */
-    /*float을 했을 때 main에 height가 없어서  visual에 normal flow로 붙어버리는데 clean both로 margin을 주지만 margin 병합이 일어난다는걸 인지해야 함*/
 }
-/* .slogan::before{
-    content: "첫 번째 자식 요소 입니다.";
-}
-
-.slogan::after{
-    content: "마지막 자식 요소 입니다.";
-} */
 
 .footer{
     background-color:silver;

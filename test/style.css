@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+}
+
+.header, .visual, .main, .slogan, .footer-content{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.header{
+    background-color: red;
+    height: 10vh;
+}
+
+.visual{
+    background-color: pink;
+    height: 10vh;
+}
+
+.main{
+    background-color: purple;
+    /* height: 60vh; */
+    /* overflow: hidden; */
+    clear: both;
+
+}
+
+.main::after {
+    content:"";
+    display: block;
+    clear: both;
+}
+
+.group{
+    height: 60vh;
+}   
+
+.group1{
+    background-color: yellow;
+    width: 250px;
+    float: left;
+}
+
+.group2{
+    background-color: skyblue;
+    width: 380px;
+    float: left;
+}
+
+.group3{
+    background-color: brown;
+    width: 190px;
+    float: left;
+}
+
+.slogan{
+    background-color: black;
+    height: 10vh;
+    /* clear: both; */
+}
+
+.footer{
+    background-color: gray;
+
+}
+
+.footer-content{
+    background-color: green;
+    height: 10vh;   
+}

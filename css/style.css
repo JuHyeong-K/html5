@@ -1,11 +1,20 @@
+html{
+    font-size: 10px;
+}
 body{
     margin: 0;
     background-color: #ccc;
+    font-size: 1.2rem;
 }
 body *, body *::before, body *::after{
     box-sizing: border-box;
 }
-
+/* 링크 스타일 */
+a{
+    text-decoration: none; /* 링크 밑줄 제거*/
+    color: inherit; /*링크 파란색 제거*/
+    /*inherit - a가 가지고 있는 agent color무시하고 기본 색상으로 변경 */
+}
 .header, .visual, .main, .slogan, .footer-content{
     width: 940px;
     margin: 0 auto;
@@ -14,6 +23,7 @@ body *, body *::before, body *::after{
 .header{
     background-color: #fff;
     position: relative;
+    padding: 0 30px;
     /* height: 10vh; */
 }
 /* 로고 */
@@ -29,7 +39,35 @@ body *, body *::before, body *::after{
 /* 안내링크 */
 .member{
     margin: 0;
+    list-style: none; /* 앞에 불릿 제거*/
+    padding-left: 0;
+    /* background: yellow; */
+    text-align: right;
+    /* display: flex;
+    justify-content: flex-end; */
+    font-size: 0; /* 여기서 공백문자 제거*/
+    padding: 5px 0; /*tab 키로 선택할 때 보여지는*/
+    position: relative;
+    right: -10px;
 }
+.member a{
+    display: inline-block; /* block요소가 들어가야 padding 위아래까지 적용 가능*/
+    /* background-color: pink; */
+    padding: 5px 10px; /* ux관점에서 padding을 줬음*/
+    text-transform: uppercase; /* */
+}
+
+.divider{
+    margin: 0 3px; /* tab키로 선택할 때 보여지는 */
+}
+.member li{
+    display: inline-block;
+    font-size: 1.2rem; /* 다시 사이즈 지정하면 공백 사라짐*/
+}
+
+/* .member li::before{
+    content: ":"
+} */
 .visual{
     background-color: salmon;
     height: 10vh;

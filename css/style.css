@@ -1,4 +1,5 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url(./fontello.css);
 @import url(./normalize.css);
 /* 숨김 컨텐츠 */
 .a11y-hidden{
@@ -45,7 +46,8 @@ a{
 .header{
     background-color: #fff;
     position: relative;
-    padding: 0 30px 50px;
+    padding: 0 30px 35px;
+    border-radius: 0 0 15px 15px;
 
 }
 /* 로고 */
@@ -94,23 +96,26 @@ a{
     height: 47px;
     padding-left: 225px;
 }
+.menu a{
+    outline: 0;
+}
 
 .menu-item{
+    position: relative;
     float :left;
     border-left: 1px solid #fff;
-    line-height: 45px;
 }
 .menu-item-button{
     display: block;
     color: #fff;
     padding: 2px 20px 0;
+    line-height: 45px;
     font-size: 1.6rem;
     font-weight: 700;
     text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
 }
 .menu-act .menu-item-button{
     color: #ff0;
-    /* border-bottom: 2px solid #000; */
 }
 .menu-act .menu-item-button::after{
     content: "";
@@ -118,18 +123,48 @@ a{
     background-color: #000;
     height: 2px;
     margin-top: -2px;
-
 }
 
 .sub-menu{
-    background-color: pink;
     position: absolute;
     display: none;
+    top: 47px;
+    white-space: nowrap;
 }
-.sub-menu1{
+.menu-act .sub-menu{
     display: block;
-    top: 0;
+}
+.sub-menu1, .sub-menu2, .sub-menu3{
+    /* display: block; */
     left: 0;
+}
+
+.sub-menu4, .sub-menu5, .sub-menu6{
+    /* display: block; */
+    right: 0;
+}
+.sub-menu li{
+    display: inline-block;
+}
+.sub-menu a{
+    display: inline-block;
+    padding: 10px 0 8px;
+    margin-right: 5px; /*편의성을 위해 gap을 만들어 줌 링크에 간격을 둠*/
+}
+/* .sub-menu a::before{
+    content: "\f192";
+    font-family: 'fontello';
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+}
+.sub-menu a:hover::before, .sub-menu a:focus::before{
+    content: "\e800";
+} */
+.sub-menu a:hover, .sub-menu a:focus{
+    color: #f00;
 }
 .visual{
     background-color: salmon;

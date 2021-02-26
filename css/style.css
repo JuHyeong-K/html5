@@ -478,7 +478,7 @@ a{
     font-size: 1.2rem;
     font-weight: 400;
     color: #666;
-    padding: 10px 8px;
+    padding: 10px 15px 8px;
     margin: 0;
     position: absolute;
     top: 0;
@@ -493,7 +493,7 @@ a{
     left: 0;
 }
 .pds-heading{
-    left: 62px;
+    left: 76px;
 }
 .notice-list, .pds-list{
     list-style-type: none;
@@ -507,11 +507,11 @@ a{
 }
 .notice-list a, .pds-list a{
     background-color: lightgreen;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    widows: 280px;
+    width: 280px;
 }
 .notice-list time, .pds-list time{
     /* width: 150px; */

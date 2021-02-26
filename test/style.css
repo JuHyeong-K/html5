@@ -68,3 +68,36 @@ body{
     background-color: green;
     height: 10vh;   
 }
+
+/* 탭  */
+/* 탭 메뉴 */
+/* .notice.tab-act{
+    overflow: hidden;
+    position: relative;
+    margin-top: 10px;
+}
+.tab.notice-heading{
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0 0;
+    font-size: 1rem;
+    font-weight: 300;
+    background-color: #fff;
+    padding: 5px;
+    float: left;
+    margin: 0;
+}
+.notice-list{
+    list-style: none;
+    padding-left: 0;
+    float: left;
+    line-height: 180%;
+}
+.notice-list time{
+    float: right;
+}
+.notice-more{
+    position: absolute;
+    top: 5px;
+    left: 320px;
+
+} */

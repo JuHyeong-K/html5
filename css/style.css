@@ -338,30 +338,90 @@ a{
 /* 웹 관련 용어 */
 .term{
     margin-top: 20px;
-    border: 1px solid #000;
-    border-radius: 5px 5px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
     padding: 15px;
-    background: linear-gradient(180deg, #ccc, #eee);
+    background: #ccc linear-gradient(180deg, #ccc, #eee);
 }
-
 .term-heading{
     margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.term-list{
+    margin: 10px 0 0 0;
+}
+.term-list-thumbnail, .term-list-brief{
+    margin-left: 0;
+}
+.term-list-subject, .term-list-brief{
+    width: 145px;
 }
 .term-list-subject{
-    background-color: yellow;
-    color: blue;
-    font-size: 1.5rem;
-    float: right;
-    width: 100px;
-}
-.term-list-thumbnail{
-    background-color: pink;
-    float: left;
+    color: #296897;
+    margin-top: -1px;
 }
 .term-list-brief{
-    background-color: skyblue;
-    width: 200px;
+    margin-top: 5px;
+    line-height: 1.5;
 }
+.term-list-thumbnail{
+
+}
+.term-list > div::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.term-list > div{
+    /* overflow: hidden; */
+    margin-top: 10px;
+}
+.term-list img{
+    vertical-align: top;
+}
+.term-list div:nth-child(odd) .term-list-subject,
+.term-list div:nth-child(odd) .term-list-brief{
+    float: right;
+}
+.term-list div:nth-child(odd) .term-list-thumbnail{
+    float: left;
+}
+.term-list div:nth-child(even) .term-list-subject,
+.term-list div:nth-child(even) .term-list-brief{
+    float: left;
+}
+.term-list div:nth-child(even) .term-list-thumbnail{
+    float: right;
+}
+/* .term-list::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.term-list div{
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.term-list-subject{
+    font-size: 1.2em;
+    color: blue;
+    float: right;
+    width: 65%;
+}
+.term-list-thumbnail{
+    float: left;
+    width: 30%;
+}
+.term-list-brief{
+    float: right;
+    width: 65%;
+    font-size: 1.1em;
+    font-weight: 400;
+    line-height: 1.5em;
+
+} */
+
 .slogan{
     background-color: lightgreen;
     height: 10vh;

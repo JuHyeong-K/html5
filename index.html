@@ -191,7 +191,6 @@
             </div>
             <div class="group group2">
               <section class="search">
-    
                 <h2 class="a11y-hidden">검색</h2>
                 <form method="POST" action="https://formspree.io/seulbinim@gmail.com" class="search-form">
                   <fieldset>
@@ -258,6 +257,19 @@
                   <a href="#" class="icon-plus pds-more" title="자료실" aria-labelledby="pds-heading">더보기</a>
                 </section>
               </div>
+              <section class="news">
+                <h2 class="news-heading" id="newsTitle">새소식</h2> <!-- id를 여기에 주고 밑에 더보기에 aria-labelledby에 적어주면 연결된다. 확장성 높다. -->
+                <article class="news-item">
+                  <h3 class="news-item-heading">W3C 사이트가 리뉴얼 되었습니다.</h3>
+                  <time class="news-item-date" datetime="2021-03-02T13:57:28">2021.03.02</time>
+                  <p class="news-item-brief">디자인 및 다양한 view환경을 고려하여 구성되어 있으며, 기존보다 최신 정보 및 개발자를 위한 기술 가이드도 찾기 쉽도록 구성되어 있습니다.</p>
+                  <figure class="news-item-thumbnail">
+                    <img src="./images/news.gif" alt="">
+                    <figcaption>W3C 리뉴얼</figcaption><!-- figcaption을 주면서 alt를 안줘도 되지만 seo관점에서 조금 불리할 수 있다. -->
+                  </figure>
+                </article>
+                <a href="#" class="news-more icon-plus" aria-labelledby="newsTitle">더보기</a> <!-- title="새소식"을 주면서 더보기 위에 커서 올리면 설명 나옴 -->
+              </section>
             </div>
             <div class="group group3">
               <!-- flex와 margin auto를 사용한 테스트 -->

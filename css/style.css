@@ -753,9 +753,55 @@ a{
 }
 /* 슬로건 */
 .slogan{
-    background-color: lightgreen;
-    height: 10vh;
+    padding: 10px 100px 10px 180px;
+    position: relative;
 }
+.slogan-heading{
+    position: absolute;
+    margin: 0;
+    width: 110px;
+    height: 83px;
+    line-height: 83px;
+    text-align: center;
+    /* line-hegt, text-align방법과 아래 방법*/
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    position: absolute;
+    bottom: -25px;
+    left: 35px;
+}
+/* 포지션을 이용한 글자 위에 배경이미지 올리는 방법 */
+.slogan-heading::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(images/coffee.png);
+    background-repeat: no-repeat;
+}
+.slogan-content{
+    font-size: 1.4rem;
+    color: #988674;
+    margin: 0;
+}
+
+/* 인용구 변경할 수 있는 방법 */
+/* .slogan-content q{
+    quotes: "[[" "]]";
+} */
+.slogan-content q::before{
+    font-size: 3.6rem;
+    position: relative;
+    top: 15px;
+}
+.slogan-content q::after{
+    content: "";
+}
+
+
 
 .footer{
     background-color:silver;

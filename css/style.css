@@ -676,9 +676,6 @@ a{
 .related-list:hover, .related-list:focus{
     height: 147px;
     padding: 10px 0;
-    /* animation-name: siteAni;
-    animation-duration: 1000ms;
-    animation-fill-mode: forwards; */
 }
 .related-list a{
     display: block;
@@ -692,9 +689,67 @@ a{
     outline-offset: -2px;
 }
 
-.event-heading, .related-heading{
+.event-heading, .related-heading, .favorite-heading {
     font-size: 1.5rem;
     margin: 0 0 10px 0;
+}
+
+/* 인기 사이트 */
+.favorite{
+    margin-top: 20px;
+    position: relative;
+    padding-top: 15px;
+}
+.favorite-heading{
+    margin: 0;
+}
+.favorite-list{
+    padding-left: 0;
+    list-style: none;
+}
+.favorite-list li::before{
+    content: counter(number);
+    color: #fff;
+    background-color: #aaa;
+    border-radius: 3px;
+    padding: 2px 5px;
+    margin-right: 5px;
+}
+.favorite-list li{
+    counter-increment: number;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+.favorite-list a{
+    flex-grow: 1;
+}
+.favorite-list .up,
+.favorite-list .down,
+.favorite-list .stop{
+    font-style: normal;
+    width: 9px;
+    height: 11px;
+    overflow: hidden;
+    text-indent: 9px;
+    white-space: nowrap;
+    background-image: url(./images/rank.png);
+    background-repeat: no-repeat;
+}
+.favorite-list .down{
+    background-position: 0 100%;
+}
+.favorite-list .stop{
+    background-position: 0 50%;
+}
+.favorite-more{
+    position: absolute;
+    top: 9px;
+    right: 2px;
+    padding: 8px;
+}
+.favorite-more::before{
+    color: hsla(110, 50%, 50%, 1);
 }
 /* 슬로건 */
 .slogan{
@@ -710,13 +765,3 @@ a{
     background-color:pink;
     height: 10vh;
 }
-/* @keyframes siteAni{
-    0%{
-        height: 27px;
-    }
-    100%{
-        height: 147px;
-        padding: 10px 0;
-
-    }
-} */

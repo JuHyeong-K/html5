@@ -809,5 +809,37 @@ a{
 
 .footer-content{
     background-color:pink;
-    height: 10vh;
+    display: grid;
+    grid-template-columns: 140px 1fr 100px;
+    grid-template-rows: 50px 50px 50px;
+    /* naming 된 area를 배치 */
+    grid-template-areas: "logo guide     badge"
+                         "logo address   badge"
+                         "logo copyright badge";
+}
+.footer-logo{
+    grid-area: logo;
+    /* grid-area: 1 / 1 / 4 / 2; */
+    background-color: salmon;
+}
+.guide{
+    grid-area: guide;
+}
+.address{
+    background-color: lime;
+    grid-area: address;
+    /* grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 3;
+    grid-column-end: 3; */
+}
+.copyright{
+    grid-area: copyright;
+    background-color: skyblue;
+    /* grid-area: 3 / 2 / 4 / 3; */
+}
+.badge{
+    grid-area: badge;
+    background-color: purple;
+    /* grid-area: 1 / 3 / 4 / 4; */
 }
